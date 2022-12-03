@@ -11,7 +11,7 @@ const InfoCards = () => {
             name: 'opening Hour',
             description: 'open 9.00 am to 5.00 everyday',
             icon: clock,
-            bgClass: 'bg-primary'
+            bgClass: 'bg-gradient-to-r from-primary to-secondary'
         },
         {
             id: 2,
@@ -25,13 +25,16 @@ const InfoCards = () => {
             name: 'Contact us',
             description: 'open 9.00 am to 5.00 everyday',
             icon: phone,
-            bgClass: 'bg-primary'
+            bgClass: 'bg-gradient-to-r from-primary to-secondary'
         },
     ]
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid mt-8 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {
-                cardData.map(card => console.log(card))
+                cardData.map(card =><InfoCard
+                   key={card.id}
+                   card={card}
+                ></InfoCard>)
             }
         </div>
     );
