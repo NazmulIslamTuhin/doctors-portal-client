@@ -12,6 +12,7 @@ const Service = ({srv}) => {
                 <p>{description}</p>
             </div>
         </div>
+        
     );
 };
 
