@@ -16,7 +16,11 @@ const Navbar = () => {
         <li><Link to="/appointment">Appointment</Link></li>
         <li><Link to="/SignUP">Signup</Link></li>
         { user?.id ? 
+        <>
+        <li><Link to="/dashboard">Dashboard</Link></li>
         <li><button onClick={handleLogOut}>Sign Out</button></li>
+
+        </>
         :<li><Link to="/login">Login</Link></li>}
     </React.Fragment>
     return (
