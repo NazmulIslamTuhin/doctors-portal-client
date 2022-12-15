@@ -15,7 +15,8 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
     const authInfo = {
-        createUser
+        createUser,
+        signIn
 
     }
     return (
