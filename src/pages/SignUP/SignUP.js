@@ -1,10 +1,22 @@
-import React from 'react';
+import { data } from 'autoprefixer';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider';
 
 const SignUP = () => {
-    // const{register} = useForm()
-    // 
+    const {register, handleSubmit, formState: {errors}} = useForm();
+    const {createUser} = useContext(AuthContext);
+    const handleSignUp = (data) =>{
+        console.log(data);
+        createUser(data.email, data.password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.log(error));
+    }
+      
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-7'>
