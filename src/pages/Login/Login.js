@@ -34,9 +34,9 @@ const Login = () => {
                         <label className="label"> <span className="label-text">Forget password?</span></label>
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
-                    <input className='btn btn-accent w-full' value="Login" type="submit" />
+                    <input className='btn btn-accent w-full mt-4' value="Login" type="submit" />
                 </form>
-                <p>New to Doctors portal <Link to="/signup">Creater new Account</Link></p>
+                <p>New to Doctors portal : <Link className='font-bold text-secondary' to="/signup">Creater new Account</Link></p>
                 <div className="divider">Or</div>
                 <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
